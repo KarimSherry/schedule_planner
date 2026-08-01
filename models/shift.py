@@ -1,0 +1,10 @@
+class Shift:
+    def __init__(self, employee_id, day, start_time, end_time, branch, break_start_time = None):
+        self.employee_id = employee_id
+        self.day = day
+        self.start_time = start_time
+        self.end_time = end_time
+        self.branch = branch
+        self.break_start_time = break_start_time
+        if self.break_start_time is not None:
+            self.break_end_time = self.break_start_time + 30  # Assuming a fixed break duration of 30 minutes to be adjusted later with proper timing input

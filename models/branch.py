@@ -1,6 +1,6 @@
 from datetime import time
 class Branch:
-    def __init__(self, name, opening_time, closing_time):
+    def __init__(self, name: str, opening_time: time, closing_time: time):
         self.name = name
         self.opening_time = opening_time
         self.closing_time = closing_time

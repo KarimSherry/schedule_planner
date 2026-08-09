@@ -6,7 +6,7 @@ class ContractType(Enum):
     VENDOR = "vendor"
     EXTRA = "extra"
 class Contract:
-    def __init__(self, weekly_hours, type):
+    def __init__(self, weekly_hours: int, type: ContractType):
         self.weekly_hours = weekly_hours
         self.type = type # The type of the contract
         @property

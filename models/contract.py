@@ -1,12 +1,28 @@
-type_of_contract = ["responsable", "manager", "vendor", "extra"]
+from enum import Enum
+
+class ContractType(Enum):
+    RESPONSABLE = "responsable"
+    MANAGER = "manager"
+    VENDOR = "vendor"
+    EXTRA = "extra"
 class Contract:
     def __init__(self, weekly_hours, type):
         self.weekly_hours = weekly_hours
         self.type = type # The type of the contract
-        self.is_responsable = True if type == type_of_contract[0] else False
-        self.is_manager = True if type == type_of_contract[1] else False
+        @property
+        def is_responsable(self):
+            return self.type == ContractType.RESPONSABLE
+        @property
+        def is_manager(self):
+            return self.type == ContractType.MANAGER
+        @property
+        def is_vendor(self):
+            return self.type == ContractType.VENDOR
+        @property
+        def is_extra(self):
+            return self.type == ContractType.EXTRA
 
-responsable_contract = Contract(35, type_of_contract[0])
-manager_contract = Contract(35, type_of_contract[1])
-vendor_contract = Contract(20, type_of_contract[2])
-extra_contract = Contract(20, type_of_contract[3])
+responsable_contract = Contract(35, ContractType.RESPONSABLE)
+manager_contract = Contract(35, ContractType.MANAGER)
+vendor_contract = Contract(20, ContractType.VENDOR)
+extra_contract = Contract(20, ContractType.EXTRA)

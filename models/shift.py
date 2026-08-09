@@ -1,4 +1,14 @@
 from datetime import time
+from enum import Enum
+
+class Weekdays(Enum):
+    MONDAY = "Monday"
+    TUESDAY = "Tuesday"
+    WEDNESDAY = "Wednesday"
+    THURSDAY = "Thursday"
+    FRIDAY = "Friday"
+    SATURDAY = "Saturday"
+    SUNDAY = "Sunday"
 class Shift:
     def __init__(self, employee, day, start_time, end_time, branch, break_start_time = None):
         self.employee = employee

@@ -24,5 +24,5 @@ class Contract:
 
 responsable_contract = Contract(35, ContractType.RESPONSABLE)
 manager_contract = Contract(35, ContractType.MANAGER)
-vendor_contract = Contract(20, ContractType.VENDOR)
+vendor_contract = Contract(35, ContractType.VENDOR)
 extra_contract = Contract(20, ContractType.EXTRA)

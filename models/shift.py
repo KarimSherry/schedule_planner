@@ -7,6 +7,9 @@ class Shift:
         self.end_time = end_time
         self.branch = branch
         self.break_start_time = break_start_time
-        if self.break_start_time is not None:
-            self.break_end_time = self.break_start_time + 30  # Assuming a fixed break duration of 30 minutes to be adjusted later with proper timing input
-            
+        '''
+        break logic to be implemented later, for now we will just store the break start time and assume a fixed break duration of 30 minutes.
+        '''
+        # if self.break_start_time is not None:
+        #     self.break_end_time = self.break_start_time + 30  # Assuming a fixed break duration of 30 minutes to be adjusted later with proper timing input
+        self.break_end_time = None
